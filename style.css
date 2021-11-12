@@ -1,0 +1,113 @@
+/* 
+etiquetas tienen un valor de 1 unidad
+clases tienen un valor de 10 unidades
+id tienen un valor de 100
+
+*/
+
+.card p:nth-child(2n) {
+  color: red;
+}
+
+label[class="label"] {
+  background-color: darkgreen;
+}
+
+label {
+  color: blue;
+}
+
+label {
+  color: red;
+}
+
+label.label {
+  color: yellow;
+}
+
+.label {
+  color: purple;
+}
+
+/* #labels {
+  background-color: coral !important;
+} */
+
+/* label.label#labels {
+  background-color: crimson;
+} */
+
+body {
+  display: grid;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 200px auto 150px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background: rgb(247, 68, 68);
+}
+
+.aside {
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  background-color: aqua;
+}
+
+.main {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background-color: chocolate;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+button {
+  padding: 0.5rem 0.1rem;
+  border: none;
+  margin-top: 1rem;
+  margin-block: 1rem;
+  margin-block-start: 1rem;
+}
+
+@media screen and (min-width: 680px) {
+  body {
+    grid-template-rows: 100px auto 150px;
+  }
+
+  .aside {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    background-color: blueviolet;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .card {
+    flex-direction: row;
+  }
+}
