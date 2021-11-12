@@ -4,8 +4,8 @@ clases tienen un valor de 10 unidades
 id tienen un valor de 100
 
 */
-
-.card p:nth-child(2n) {
+@import url(./formulario.css);
+.cardp: nth-child(2n) {
   color: red;
 }
 
